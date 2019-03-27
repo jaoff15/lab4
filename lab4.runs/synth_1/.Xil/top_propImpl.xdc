@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/home/jacoboffersen/Repos/lab4_1/src/RGB_Matrix_constrains.xdc rfile:../../../src/RGB_Matrix_constrains.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/jacoboffersen/Repos/lab4/src/RGB_Matrix_constrains.xdc rfile:../../../src/RGB_Matrix_constrains.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN L16   IOSTANDARD LVCMOS33 } [get_ports { clk     }]; #IO_L11P_T1_SRCC_35 Sch=sysclk
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]

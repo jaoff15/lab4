@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/jacoboffersen/Repos/lab4_1/lab4_1.runs/impl_1'
+HD_PWD='/home/jacoboffersen/Repos/lab4/lab4.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

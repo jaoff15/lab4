@@ -65,22 +65,21 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7z010clg400-1
   set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir /home/jacoboffersen/Repos/lab4_1/lab4_1.cache/wt [current_project]
-  set_property parent.project_path /home/jacoboffersen/Repos/lab4_1/lab4_1.xpr [current_project]
-  set_property ip_output_repo /home/jacoboffersen/Repos/lab4_1/lab4_1.cache/ip [current_project]
+  set_property webtalk.parent_dir /home/jacoboffersen/Repos/lab4/lab4.cache/wt [current_project]
+  set_property parent.project_path /home/jacoboffersen/Repos/lab4/lab4.xpr [current_project]
+  set_property ip_output_repo /home/jacoboffersen/Repos/lab4/lab4.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet /home/jacoboffersen/Repos/lab4_1/lab4_1.runs/synth_1/top.dcp
+  add_files -quiet /home/jacoboffersen/Repos/lab4/lab4.runs/synth_1/top.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files /home/jacoboffersen/Repos/lab4_1/lab4_1.srcs/sources_1/bd/LED_RAM/LED_RAM.bd
+  add_files /home/jacoboffersen/Repos/lab4/lab4.srcs/sources_1/bd/LED_RAM/LED_RAM.bd
   set_param project.isImplRun false
-  read_xdc /home/jacoboffersen/Repos/lab4_1/src/RGB_Matrix_constrains.xdc
+  read_xdc /home/jacoboffersen/Repos/lab4/src/RGB_Matrix_constrains.xdc
   set_param project.isImplRun true
   link_design -top top -part xc7z010clg400-1
   set_param project.isImplRun false

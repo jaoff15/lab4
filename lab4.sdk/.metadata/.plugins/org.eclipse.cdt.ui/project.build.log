@@ -1,4 +1,4 @@
-15:03:25 **** Incremental Build of configuration Debug for project project ****
+20:25:08 **** Auto Build of configuration Debug for project project ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
@@ -19,5 +19,5 @@ arm-none-eabi-size project.elf  |tee "project.elf.size"
 Finished building: project.elf.size
  
 
-15:03:25 Build Finished (took 361ms)
+20:25:08 Build Finished (took 361ms)
 

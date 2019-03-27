@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?scdStore version="2"?><scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
-<instance id="xilinx.gnu.armv7.exe.debug.1666523046;xilinx.gnu.armv7.exe.debug.1666523046.">
+<instance id="xilinx.gnu.armv7.exe.debug.212545332;xilinx.gnu.armv7.exe.debug.212545332.">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
 <includePath path="/home/jacoboffersen/Program/vivado20182/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/include"/>
 <includePath path="/home/jacoboffersen/Program/vivado20182/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/include-fixed"/>
@@ -417,7 +417,7 @@
 <definedSymbol symbol="__USES_INITFINI__=1"/>
 </collector>
 </instance>
-<instance id="xilinx.gnu.armv7.exe.release.563018990;xilinx.gnu.armv7.exe.release.563018990.">
+<instance id="xilinx.gnu.armv7.exe.release.1518049226;xilinx.gnu.armv7.exe.release.1518049226.">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
 <includePath path="/home/jacoboffersen/Program/vivado20182/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/include"/>
 <includePath path="/home/jacoboffersen/Program/vivado20182/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/include-fixed"/>
@@ -834,7 +834,7 @@
 <definedSymbol symbol="__USES_INITFINI__=1"/>
 </collector>
 </instance>
-<instance id="xilinx.gnu.armv7.exe.debug.1666523046;xilinx.gnu.armv7.exe.debug.1666523046.;xilinx.gnu.armv7.c.toolchain.compiler.debug.1261667370;xilinx.gnu.armv7.c.compiler.input.112178728">
+<instance id="xilinx.gnu.armv7.exe.debug.212545332;xilinx.gnu.armv7.exe.debug.212545332.;xilinx.gnu.armv7.c.toolchain.compiler.debug.1358074399;xilinx.gnu.armv7.c.compiler.input.859324734">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
 <includePath path="/home/jacoboffersen/Program/vivado20182/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/include"/>
 <includePath path="/home/jacoboffersen/Program/vivado20182/SDK/2018.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/7.2.1/include-fixed"/>

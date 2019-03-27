@@ -21,6 +21,7 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
+    <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
     <Option Name="EnableCoreContainer" Val="FALSE"/>
@@ -73,11 +74,11 @@
         <CompFileExtendedInfo CompFileName="LED_RAM.bd" FileRelPathName="ip/LED_RAM_rst_ps7_0_100M_0/LED_RAM_rst_ps7_0_100M_0.xci">
           <Proxy FileSetName="LED_RAM_rst_ps7_0_100M_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="LED_RAM.bd" FileRelPathName="ip/LED_RAM_processing_system7_0_0/LED_RAM_processing_system7_0_0.xci">
-          <Proxy FileSetName="LED_RAM_processing_system7_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="LED_RAM.bd" FileRelPathName="ip/LED_RAM_blk_mem_gen_0_0/LED_RAM_blk_mem_gen_0_0.xci">
           <Proxy FileSetName="LED_RAM_blk_mem_gen_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="LED_RAM.bd" FileRelPathName="ip/LED_RAM_processing_system7_0_0/LED_RAM_processing_system7_0_0.xci">
+          <Proxy FileSetName="LED_RAM_processing_system7_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="LED_RAM.bd" FileRelPathName="ip/LED_RAM_axi_bram_ctrl_0_0/LED_RAM_axi_bram_ctrl_0_0.xci">
           <Proxy FileSetName="LED_RAM_axi_bram_ctrl_0_0"/>
@@ -92,31 +93,37 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../lab4_1/src/led_matrix.vhd">
+      <File Path="$PPRDIR/src/color_channel.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../lab4_1/src/pwm_control.vhd">
+      <File Path="$PPRDIR/src/led_matrix.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../lab4_1/src/pwm_generator.vhd">
+      <File Path="$PPRDIR/src/mem_interface.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../lab4_1/src/row.vhd">
+      <File Path="$PPRDIR/src/pwm_generator.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../lab4_1/src/top.vhd">
+      <File Path="$PPRDIR/src/row.vhd">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/src/top.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -130,7 +137,7 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PPRDIR/../lab4_1/src/RGB_Matrix_constrains.xdc">
+      <File Path="$PPRDIR/src/RGB_Matrix_constrains.xdc">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>

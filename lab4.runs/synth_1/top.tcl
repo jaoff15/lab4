@@ -17,47 +17,47 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7z010clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/jacoboffersen/Repos/lab4_1/lab4_1.cache/wt [current_project]
-set_property parent.project_path /home/jacoboffersen/Repos/lab4_1/lab4_1.xpr [current_project]
+set_property webtalk.parent_dir /home/jacoboffersen/Repos/lab4/lab4.cache/wt [current_project]
+set_property parent.project_path /home/jacoboffersen/Repos/lab4/lab4.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
-set_property ip_output_repo /home/jacoboffersen/Repos/lab4_1/lab4_1.cache/ip [current_project]
+set_property ip_output_repo /home/jacoboffersen/Repos/lab4/lab4.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib /home/jacoboffersen/Repos/lab4_1/lab4_1.srcs/sources_1/bd/LED_RAM/hdl/LED_RAM_wrapper.v
+read_verilog -library xil_defaultlib /home/jacoboffersen/Repos/lab4/lab4.srcs/sources_1/bd/LED_RAM/hdl/LED_RAM_wrapper.v
 read_vhdl -library xil_defaultlib {
-  /home/jacoboffersen/Repos/lab4_1/src/led_matrix.vhd
-  /home/jacoboffersen/Repos/lab4_1/src/pwm_control.vhd
-  /home/jacoboffersen/Repos/lab4_1/src/pwm_generator.vhd
-  /home/jacoboffersen/Repos/lab4_1/src/row.vhd
-  /home/jacoboffersen/Repos/lab4_1/src/top.vhd
+  /home/jacoboffersen/Repos/lab4/src/color_channel.vhd
+  /home/jacoboffersen/Repos/lab4/src/led_matrix.vhd
+  /home/jacoboffersen/Repos/lab4/src/mem_interface.vhd
+  /home/jacoboffersen/Repos/lab4/src/pwm_generator.vhd
+  /home/jacoboffersen/Repos/lab4/src/row.vhd
+  /home/jacoboffersen/Repos/lab4/src/top.vhd
 }
-add_files /home/jacoboffersen/Repos/lab4_1/lab4_1.srcs/sources_1/bd/LED_RAM/LED_RAM.bd
-set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4_1/lab4_1.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_processing_system7_0_0/LED_RAM_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4_1/lab4_1.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_blk_mem_gen_0_0/LED_RAM_blk_mem_gen_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4_1/lab4_1.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_axi_bram_ctrl_0_0/LED_RAM_axi_bram_ctrl_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4_1/lab4_1.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_axi_smc_0/bd_0/ip/ip_5/bd_cefd_s00a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4_1/lab4_1.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_axi_smc_0/bd_0/ip/ip_11/bd_cefd_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4_1/lab4_1.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_axi_smc_0/bd_0/ip/ip_6/bd_cefd_sarn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4_1/lab4_1.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_axi_smc_0/bd_0/ip/ip_7/bd_cefd_srn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4_1/lab4_1.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_axi_smc_0/bd_0/ip/ip_8/bd_cefd_sawn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4_1/lab4_1.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_axi_smc_0/bd_0/ip/ip_9/bd_cefd_swn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4_1/lab4_1.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_axi_smc_0/bd_0/ip/ip_10/bd_cefd_sbn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4_1/lab4_1.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_axi_smc_0/bd_0/ip/ip_1/bd_cefd_psr_aclk_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4_1/lab4_1.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_axi_smc_0/bd_0/ip/ip_1/bd_cefd_psr_aclk_0.xdc]
-set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4_1/lab4_1.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_axi_smc_0/ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4_1/lab4_1.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_rst_ps7_0_100M_0/LED_RAM_rst_ps7_0_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4_1/lab4_1.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_rst_ps7_0_100M_0/LED_RAM_rst_ps7_0_100M_0.xdc]
-set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4_1/lab4_1.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_rst_ps7_0_100M_0/LED_RAM_rst_ps7_0_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4_1/lab4_1.srcs/sources_1/bd/LED_RAM/LED_RAM_ooc.xdc]
+add_files /home/jacoboffersen/Repos/lab4/lab4.srcs/sources_1/bd/LED_RAM/LED_RAM.bd
+set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4/lab4.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_processing_system7_0_0/LED_RAM_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4/lab4.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_blk_mem_gen_0_0/LED_RAM_blk_mem_gen_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4/lab4.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_axi_bram_ctrl_0_0/LED_RAM_axi_bram_ctrl_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4/lab4.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_axi_smc_0/bd_0/ip/ip_5/bd_cefd_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4/lab4.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_axi_smc_0/bd_0/ip/ip_11/bd_cefd_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4/lab4.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_axi_smc_0/bd_0/ip/ip_6/bd_cefd_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4/lab4.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_axi_smc_0/bd_0/ip/ip_7/bd_cefd_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4/lab4.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_axi_smc_0/bd_0/ip/ip_8/bd_cefd_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4/lab4.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_axi_smc_0/bd_0/ip/ip_9/bd_cefd_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4/lab4.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_axi_smc_0/bd_0/ip/ip_10/bd_cefd_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4/lab4.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_axi_smc_0/bd_0/ip/ip_1/bd_cefd_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4/lab4.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_axi_smc_0/bd_0/ip/ip_1/bd_cefd_psr_aclk_0.xdc]
+set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4/lab4.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_axi_smc_0/ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4/lab4.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_rst_ps7_0_100M_0/LED_RAM_rst_ps7_0_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4/lab4.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_rst_ps7_0_100M_0/LED_RAM_rst_ps7_0_100M_0.xdc]
+set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4/lab4.srcs/sources_1/bd/LED_RAM/ip/LED_RAM_rst_ps7_0_100M_0/LED_RAM_rst_ps7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/jacoboffersen/Repos/lab4/lab4.srcs/sources_1/bd/LED_RAM/LED_RAM_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -67,8 +67,8 @@ set_property used_in_implementation false [get_files -all /home/jacoboffersen/Re
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/jacoboffersen/Repos/lab4_1/src/RGB_Matrix_constrains.xdc
-set_property used_in_implementation false [get_files /home/jacoboffersen/Repos/lab4_1/src/RGB_Matrix_constrains.xdc]
+read_xdc /home/jacoboffersen/Repos/lab4/src/RGB_Matrix_constrains.xdc
+set_property used_in_implementation false [get_files /home/jacoboffersen/Repos/lab4/src/RGB_Matrix_constrains.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

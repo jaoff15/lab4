@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1553694991">
-  <File Type="PA-TCL" Name="top.tcl"/>
-  <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
-  <File Type="RDS-RDS" Name="top.vds"/>
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1553714462">
+  <File Type="VDS-TIMING-PB" Name="top_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="top_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="top.dcp"/>
   <File Type="RDS-UTIL-PB" Name="top_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="top_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="top_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="top.vds"/>
+  <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
+  <File Type="PA-TCL" Name="top.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/LED_RAM/LED_RAM.bd">
@@ -26,31 +29,37 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../lab4_1/src/led_matrix.vhd">
+    <File Path="$PPRDIR/src/color_channel.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../lab4_1/src/pwm_control.vhd">
+    <File Path="$PPRDIR/src/led_matrix.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../lab4_1/src/pwm_generator.vhd">
+    <File Path="$PPRDIR/src/mem_interface.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../lab4_1/src/row.vhd">
+    <File Path="$PPRDIR/src/pwm_generator.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../lab4_1/src/top.vhd">
+    <File Path="$PPRDIR/src/row.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/src/top.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -64,7 +73,7 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PPRDIR/../lab4_1/src/RGB_Matrix_constrains.xdc">
+    <File Path="$PPRDIR/src/RGB_Matrix_constrains.xdc">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -78,9 +87,9 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="LED_RAM_axi_smc_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="LED_RAM_axi_bram_ctrl_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="LED_RAM_blk_mem_gen_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="LED_RAM_rst_ps7_0_100M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="LED_RAM_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="LED_RAM_blk_mem_gen_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="LED_RAM_axi_bram_ctrl_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="LED_RAM_axi_smc_0"/>
 </GenRun>
